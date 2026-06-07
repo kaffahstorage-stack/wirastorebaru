@@ -1191,7 +1191,7 @@ const response = await fetch("https://wirastorebaru-production.up.railway.app/cr
 
 const data = await response.json();
 
-  const orderId = generateOrderId();
+  
 
 snap.pay(data.token, {
   onSuccess: function(result) {
