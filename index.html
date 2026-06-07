@@ -1174,20 +1174,22 @@ async function submitCheckout(e) {
 
   const total = cartSubtotal();
 
-  const response = await fetch("/create-transaction", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-   body: JSON.stringify({
-  total,
-  name,
-  phone,
-  address
-})
-  });
+const total = cartSubtotal();
 
-  const data = await response.json();
+const response = await fetch("https://wirastorebaru-production.up.railway.app/create-transaction", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    total,
+    name,
+    phone,
+    address
+  })
+});
+
+const data = await response.json();
 
   const orderId = generateOrderId();
 
