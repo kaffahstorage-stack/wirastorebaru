@@ -1,0 +1,17 @@
+{
+  "name": "wiraaudiomarket",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^13.10.0",
+    "midtrans-client": "^1.4.3"
+  }
+}

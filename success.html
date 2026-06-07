@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Success</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ecfdf5, #f0f9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD */
+.box {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  animation: fadeUp 0.6s ease;
+}
+
+/* ICON */
+.icon {
+  font-size: 60px;
+  color: #16a34a;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: pop 0.6s ease forwards;
+}
+
+/* TITLE */
+h1 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #111827;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* BUTTON */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+a:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ANIMATIONS */
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="icon">✓</div>
+  <h1>Pembayaran berhasil</h1>
+  <a href="/">🏠 Kembali ke Beranda</a>
+</div>
+
+</body>
+</html>
